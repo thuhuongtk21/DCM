@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DCM]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Run on FIREFOX browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tc.common.TC_01_LoginToApplication">
+        <methods>
+          <include name="afterTest"/>
+          <include name="TC_02_OpenMenu"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tc.common.TC_01_LoginToApplication -->
+    </classes>
+  </test> <!-- Run on FIREFOX browser(failed) -->
+</suite> <!-- Failed suite [DCM] -->
