@@ -16,12 +16,12 @@
     </classes>
   </test> 
   
-  <test name="Run on IE browser">
+  <!-- <test name="Run on IE browser">
   <parameter name = "browser" value = "ie"/>
   <parameter name = "version" value = "2.39"/>
     <classes>
       <class name="tc.common.OpenAllPages"/>
     </classes>
-  </test> 
+  </test>  -->
   
 </suite> 

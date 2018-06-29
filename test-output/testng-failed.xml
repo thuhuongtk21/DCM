@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [DCM]">
-  <parameter name="browser" value="firefox"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="version" value="2.39"/>
   <test name="Run on FIREFOX browser(failed)">
     <parameter name="browser" value="firefox"/>
+    <parameter name="version" value=""/>
     <classes>
-      <class name="tc.common.TC_01_LoginToApplication">
+      <class name="tc.common.OpenAllPages">
         <methods>
+          <include name="afterTest"/>
           <include name="afterTest"/>
           <include name="TC_02_OpenMenu"/>
           <include name="beforeTest"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- tc.common.TC_01_LoginToApplication -->
+      </class> <!-- tc.common.OpenAllPages -->
     </classes>
   </test> <!-- Run on FIREFOX browser(failed) -->
+  <test name="Run on CHROME browser(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="2.39"/>
+    <classes>
+      <class name="tc.common.OpenAllPages">
+        <methods>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="TC_02_OpenMenu"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tc.common.OpenAllPages -->
+    </classes>
+  </test> <!-- Run on CHROME browser(failed) -->
 </suite> <!-- Failed suite [DCM] -->

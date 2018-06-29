@@ -2,6 +2,12 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
+import action.deal.DealsBrowseDealAndCostPO;
+import action.deal.DealsMaintainPO;
+import action.deal.DealsSODLDetailsPO;
+import action.deal.DealsSODLSearchAndMaintainPO;
+import action.deal.DealsSODLTransactionPO;
+import action.deal.DealsSearchPO;
 import action.offer.DealBuilderPO;
 import action.offer.OfferAccpetPO;
 import action.offer.OfferCreatePO;
@@ -22,6 +28,13 @@ public class PageFactoryManager {
 	private static OfferSearchPO offerSearchPage;
 	private static OfferMaintainPO offerMaintainPage;
 	private static OfferMassUploadPO offerMassUploadPage;
+	private static DealsBrowseDealAndCostPO dealsBrowserDealAndCostPage;
+	private static DealsMaintainPO dealsMaintainPage;
+	private static DealsSearchPO dealsSearchPage;
+	private static DealsSODLDetailsPO dealsSODLDetailsPage;
+	private static DealsSODLSearchAndMaintainPO dealsSODLSearchAndMaintainPage;
+	private static DealsSODLTransactionPO dealsSODLTransactionPage;
+	
 	
 	public static LoginPagePO getLoginPage(WebDriver driver_) {
 		if(loginPage==null) {
@@ -85,6 +98,48 @@ public class PageFactoryManager {
 			return new OfferMassUploadPO(driver_);
 		}
 		return offerMassUploadPage;
+	}
+	
+	public static DealsBrowseDealAndCostPO getDealsBrowserDealAndCostPage(WebDriver driver_) {
+		if(dealsBrowserDealAndCostPage==null) {
+			return new DealsBrowseDealAndCostPO(driver_);
+		}
+		return dealsBrowserDealAndCostPage;
+	}
+	
+	public static DealsMaintainPO getDealsMaintainPage(WebDriver driver_) {
+		if(dealsMaintainPage==null) {
+			return new DealsMaintainPO(driver_);
+		}
+		return dealsMaintainPage;
+	}
+	
+	public static DealsSearchPO getDealsSearchPage(WebDriver driver_) {
+		if(dealsSearchPage==null) {
+			return new DealsSearchPO(driver_);
+		}
+		return dealsSearchPage;
+	}
+	
+	public static DealsSODLDetailsPO getDealsSODLDetailsPage(WebDriver driver_) {
+		if(dealsSODLDetailsPage==null) {
+			return new DealsSODLDetailsPO(driver_);
+		}
+		return dealsSODLDetailsPage;
+	}
+	
+	public static DealsSODLSearchAndMaintainPO getDealsSODLSearchAndMaintainPage(WebDriver driver_) {
+		if(dealsSODLSearchAndMaintainPage==null) {
+			return new DealsSODLSearchAndMaintainPO(driver_);
+		}
+		return dealsSODLSearchAndMaintainPage;
+	}
+	
+	public static DealsSODLTransactionPO getDealsSODLTransactionPage(WebDriver driver_) {
+		if(dealsSODLTransactionPage==null) {
+			return new DealsSODLTransactionPO(driver_);
+		}
+		return dealsSODLTransactionPage;
 	}
 
 }

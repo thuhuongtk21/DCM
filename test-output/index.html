@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-DCM">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,6 +99,11 @@
                       <a href="#" panel-name="suite-DCM" class="show-methods passed suite-DCM"> (show)</a> <!-- show-methods passed suite-DCM -->
                     </span>
                     <div class="method-list-content passed suite-DCM">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-DCM" title="tc.common.OpenAllPages" hash-for-method="TC_02_OpenMenu">TC_02_OpenMenu</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-DCM" title="tc.common.OpenAllPages" hash-for-method="TC_02_OpenMenu">TC_02_OpenMenu</a> <!-- method navigator-link -->
@@ -129,6 +134,13 @@
                   <span class="method-name">TC_02_OpenMenu</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02_OpenMenu">
+                  </a> <!-- TC_02_OpenMenu -->
+                  <span class="method-name">TC_02_OpenMenu</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-DCM-class-passed -->
         </div> <!-- panel DCM -->
@@ -143,10 +155,18 @@
 &lt;suite name=&quot;DCM&quot;&gt;
   &lt;test name=&quot;Run on FIREFOX browser&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;version&quot; value=&quot;&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tc.common.OpenAllPages&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on FIREFOX browser --&gt;
+  &lt;test name=&quot;Run on CHROME browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;version&quot; value=&quot;2.39&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tc.common.OpenAllPages&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Run on CHROME browser --&gt;
 &lt;/suite&gt; &lt;!-- DCM --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,6 +179,9 @@
             <ul>
               <li>
                 <span class="test-name">Run on FIREFOX browser (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Run on CHROME browser (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +207,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC_02_OpenMenu')
 data.setCell(0, 2, 'tc.common.OpenAllPages')
-data.setCell(0, 3, 150030);
+data.setCell(0, 3, 239898);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_02_OpenMenu')
+data.setCell(1, 2, 'tc.common.OpenAllPages')
+data.setCell(1, 3, 214949);
 window.suiteTableData['DCM']= { tableData: data, tableDiv: 'times-div-DCM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-DCM">
               </div> <!-- times-div-DCM -->
             </div> <!-- times-div -->
@@ -221,16 +248,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tc.common.OpenAllPages</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(firefox)</span>
+                <span class="method-name">beforeTest(firefox, )</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TC_02_OpenMenu</span>
-                <span class="method-start">23619 ms</span>
+                <span class="method-start">26657 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">173654 ms</span>
+                <span class="method-start">266558 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(chrome, 2.39)</span>
+                <span class="method-start">267360 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">TC_02_OpenMenu</span>
+                <span class="method-start">286719 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">501669 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

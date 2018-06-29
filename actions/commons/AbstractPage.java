@@ -17,7 +17,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import action.offer.DealBuilderPO;
 import action.offer.OfferAccpetPO;
 import action.offer.OfferCreatePO;
+import action.offer.OfferMaintainPO;
 import action.offer.OfferReviewPO;
+import action.offer.OfferSearchPO;
 import inter.common.AbstractPageUI;
 
 
@@ -368,6 +370,20 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.MENU_DYNAMIC_LINK, "/DCM_UI/offer-acceptant", "Accept/Reject");
 		waitForControlInvisible(driver, AbstractPageUI.LOADING_BAR);
 		return PageFactoryManager.getOfferAcceptPage(driver);
+	}
+	
+	public OfferSearchPO openOfferSearchPage(WebDriver driver) {
+		clickToElement(driver, AbstractPageUI.MENU_DYNAMIC_LINK, "#", "Offer");
+		clickToElement(driver, AbstractPageUI.MENU_DYNAMIC_LINK, "/DCM_UI/offer-search", "Search");
+		waitForControlInvisible(driver, AbstractPageUI.LOADING_BAR);
+		return PageFactoryManager.getOfferSearchPage(driver);
+	}
+	
+	public OfferMaintainPO openOfferMaintainPage(WebDriver driver) {
+		clickToElement(driver, AbstractPageUI.MENU_DYNAMIC_LINK, "#", "Offer");
+		clickToElement(driver, AbstractPageUI.MENU_DYNAMIC_LINK, "/DCM_UI/offer-maintain", "Maintain");
+		waitForControlInvisible(driver, AbstractPageUI.LOADING_BAR);
+		return PageFactoryManager.getOfferMaintainPage(driver);
 	}
 	
 	
